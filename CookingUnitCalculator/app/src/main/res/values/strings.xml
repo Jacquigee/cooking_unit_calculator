@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Cooking Unit Calculator</string>
+    <string name="unit_in_cups">Unit in cups</string>
+    <string name="convert_to">Convert to?</string>
+    <string name="grams">Grams</string>
+    <string name="mililitres">Mililitres</string>
+    <string name="fluid_ounces">Fluid Ounces</string>
+    <string name="table_spoon">Table spoon</string>
+    <string name="round_up">Round up</string>
+    <string name="convert">Convert</string>
+    <string name="converted_unit">Converted Unit</string>
+</resources>

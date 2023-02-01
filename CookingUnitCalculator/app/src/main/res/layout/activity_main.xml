@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/unit_cups_input"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="@string/unit_in_cups"/>
+
+    <TextView
+        android:id="@+id/unit_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/unit_cups_input"
+        app:layout_constraintTop_toBottomOf="@id/unit_cups_input"
+        android:text="@string/convert_to"/>
+
+    <RadioGroup
+        android:id="@+id/unit_options"
+        android:checkedButton="@id/radio_grams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/unit_question"
+        app:layout_constraintTop_toBottomOf="@+id/unit_question">
+
+        <RadioButton
+            android:id="@+id/radio_grams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grams"/>
+        <RadioButton
+            android:id="@+id/radio_millilitres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mililitres"/>
+        <RadioButton
+            android:id="@+id/radio_ounces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fluid_ounces"/>
+        <RadioButton
+            android:id="@+id/radio_tablespoon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/table_spoon"/>
+
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/unit_switch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/round_up"
+        android:checked="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/unit_options"
+        app:layout_constraintTop_toBottomOf="@id/unit_options"/>
+
+    <Button
+        android:id="@+id/unit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/unit_switch"
+        android:text="@string/convert"/>
+
+
+    <TextView
+        android:id="@+id/unit_converted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/converted_unit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/unit_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
